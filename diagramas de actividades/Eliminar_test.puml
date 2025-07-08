@@ -1,0 +1,17 @@
+@startuml Eliminar_test
+|Especialista|
+start
+
+:Acceder a módulo de tests;
+:Buscar y seleccionar test a eliminar;
+:Mostrar detalles del test;
+
+if (¿Confirmar eliminación?) then (Sí)
+  :Eliminar test de la base de datos;
+  :Mostrar mensaje de éxito;
+else (No)
+  :Cancelar eliminación;
+endif
+
+stop
+@enduml

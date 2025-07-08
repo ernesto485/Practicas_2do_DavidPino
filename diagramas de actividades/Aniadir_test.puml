@@ -1,0 +1,19 @@
+@startuml Aniadir_ley
+|Especialista|
+start
+
+:Acceder a módulo de tests;
+:Seleccionar "Crear nuevo test";
+:Ingresar título, materia y nivel;
+:Agregar preguntas y opciones;
+:Validar test;
+
+if (¿Test válido?) then (Sí)
+  :Guardar test en la base de datos;
+  :Mostrar mensaje de confirmación;
+else (No)
+  :Mostrar errores;
+endif
+
+stop
+@enduml

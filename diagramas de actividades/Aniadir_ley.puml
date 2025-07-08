@@ -1,0 +1,19 @@
+@startuml Aniadir_ley
+|Especialista o Administrador|
+start
+
+:Validar credenciales;
+:Acceder a la sección de leyes;
+:Seleccionar "Añadir nueva ley";
+:Completar formulario de ley;
+:Validar campos obligatorios;
+
+if (¿Campos válidos?) then (Sí)
+  :Guardar ley en base de datos;
+  :Mostrar mensaje de éxito;
+else (No)
+  :Mostrar errores de validación;
+endif
+
+stop
+@enduml

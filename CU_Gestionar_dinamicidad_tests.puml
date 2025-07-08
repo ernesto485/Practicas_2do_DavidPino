@@ -1,0 +1,35 @@
+@startuml CU
+left to right direction
+skinparam packageStyle rectangle
+
+actor Usuario
+actor Especialista
+
+
+package "Gestionar dinamicidad de los tests" {
+
+    usecase "UC7_1: Adaptar contenidos según nivel de conocimiento del usuario" as UC7_1
+    usecase "UC7_2: Recomendar rutas de estudio personalizadas" as UC7_2
+    
+    usecase "UC8_1: Añadir test" as UC8_1
+    usecase "UC8_2: Editar test" as UC8_2
+    usecase "UC8_3: Mostrar test" as UC8_3
+    usecase "UC8_4: Eliminar test" as UC8_4
+}
+
+' Relaciones (solo actor base por herencia)
+
+
+Especialista -- UC8_1
+Especialista -- UC8_2
+Especialista -- UC8_4
+
+Usuario -- UC8_3
+
+UC8_3 ..> UC7_1 : <<inlcude>>
+UC8_3 ..> UC7_2 : <<inlcude>>
+
+Especialista --> Usuario
+
+
+@enduml

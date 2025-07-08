@@ -1,0 +1,20 @@
+@startuml Aniadir_notificacion
+|Administrador|
+start
+
+:Acceder a módulo de notificaciones;
+:Seleccionar "Crear nueva notificación";
+:Redactar mensaje;
+:Seleccionar destinatarios;
+:Programar o enviar notificación;
+
+if (¿Envío inmediato?) then (Sí)
+  :Enviar notificación;
+else (No)
+  :Guardar para envío programado;
+endif
+
+:Confirmar operación;
+
+stop
+@enduml

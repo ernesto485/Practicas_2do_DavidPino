@@ -1,0 +1,10 @@
+@startuml Carga_de_informacion
+|Usuario|
+start
+  :Comparar fecha de la Informacion de la App;
+  if (¿Fecha anterior a la ultima actualizacíon?) then (Sí)
+    :Proporcionar informacion actualizada;
+  else (No)
+  endif
+stop
+@enduml

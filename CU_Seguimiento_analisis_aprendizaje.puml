@@ -1,0 +1,20 @@
+@startuml CU
+left to right direction
+skinparam packageStyle rectangle
+
+actor Usuario
+
+
+package "Realizar seguimiento y análisis del aprendizaje" {
+
+    usecase "UC3_1: Registrar el progreso individual" as UC3_1
+    usecase "UC3_2: Generar reportes estadísticos" as UC3_2
+    
+}
+
+' Relaciones (solo actor base por herencia)
+Usuario -- UC3_1
+Especialista -- UC3_2
+
+
+@enduml

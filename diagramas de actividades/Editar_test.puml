@@ -1,0 +1,18 @@
+@startuml Editar_test
+|Especialista|
+start
+
+:Acceder a módulo de tests;
+:Buscar y seleccionar test a editar;
+:Mostrar formulario con datos actuales;
+:Modificar preguntas o metadatos;
+
+if (¿Cambios válidos?) then (Sí)
+  :Guardar cambios en base de datos;
+  :Mostrar mensaje de éxito;
+else (No)
+  :Mostrar errores de validación;
+endif
+
+stop
+@enduml

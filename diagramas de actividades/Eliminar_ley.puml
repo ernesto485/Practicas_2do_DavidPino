@@ -1,0 +1,17 @@
+@startuml Eliminar_ley
+|Especialista o Administrador|
+start
+
+:Acceder a módulo de leyes;
+:Buscar y seleccionar ley a eliminar;
+:Mostrar detalles de la ley;
+
+if (¿Confirmar eliminación?) then (Sí)
+  :Eliminar ley de la base de datos;
+  :Mostrar mensaje de éxito;
+else (No)
+  :Cancelar operación;
+endif
+
+stop
+@enduml

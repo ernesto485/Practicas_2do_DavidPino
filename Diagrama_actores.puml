@@ -1,0 +1,9 @@
+@startuml UC
+left to right direction
+
+actor Usuario
+actor Especialista
+actor Administrador
+
+Administrador --> Especialista
+Especialista --> Usuario

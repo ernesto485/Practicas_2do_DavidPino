@@ -1,0 +1,28 @@
+@startuml CU
+left to right direction
+skinparam packageStyle rectangle
+
+
+
+package "Gestionar usuarios y permisos" {
+
+    usecase "UC4_1: Registrar usuario" as UC4_1
+    usecase "UC4_2: Asignar rol al usuario (administrador, estudiante, profesor)" as UC4_2
+    usecase "UC4_3: Editar usuario" as UC4_3
+    usecase "UC4_4: Mostrar usuario" as UC4_4
+    usecase "UC4_5: Eliminar usuario" as UC4_5
+
+}
+
+' Relaciones (solo actor base por herencia)
+
+Administrador -- UC4_1
+Administrador -- UC4_3
+Administrador -- UC4_4
+Administrador -- UC4_5
+
+UC4_1 ..> UC4_2 : <<include>>
+
+
+
+@enduml
